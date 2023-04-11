@@ -144,7 +144,6 @@ extension GameViewController: ButtonsCellDelegate {
             button.isEnabled = false
             game.numberIsFound = true
             game.check()
-            print(game.items)
             updateUI()
         }
         
