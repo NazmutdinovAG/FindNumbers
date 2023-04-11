@@ -51,6 +51,7 @@ class Game {
     private var secondsGame: Int {
         didSet {
             if secondsGame == 0 {
+                stopGame()
                 status = .lose
             }
             updateTime(status,secondsGame)
@@ -89,6 +90,7 @@ class Game {
     }
     
     func newGame() {
+        stopGame()
         status = .start
         self.secondsGame = self.timeForGame
         setupGame()
